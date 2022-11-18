@@ -4,6 +4,8 @@ import { LocationUser } from "./LocationUser/LocationUser";
 import { NameUser } from "./NameUser/NameUser";
 import { TagUser } from "./TagUser/TagUser";
 import css from "./Description.module.css";
+import PropTypes from "prop-types";
+
 
 export const Description =({userInfo})=>{
    const {
@@ -20,4 +22,15 @@ export const Description =({userInfo})=>{
         <TagUser tag ={tag}/>
         <LocationUser location ={location}/>
     </div>
+}
+
+Description.protoType = {
+    userInfo: PropTypes.objectOf(
+        PropTypes.exact({
+            username: PropTypes.string.isRequired,
+            tag: PropTypes.string.isRequired,
+            location: PropTypes.string.isRequired,
+            avatar: PropTypes.string.isRequired
+        })
+    )
 }

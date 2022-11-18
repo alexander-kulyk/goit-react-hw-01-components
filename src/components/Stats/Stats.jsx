@@ -1,4 +1,5 @@
 import css from "./Stats.module.css";
+import PropTypes from "prop-types";
 
 export const Stats = ({userInfo}) =>{
     const { 
@@ -22,6 +23,17 @@ export const Stats = ({userInfo}) =>{
             <span className={css.quantity}>{likes}</span>
         </li>
         
-        
     </ul>
+}
+
+Stats.protoType = {
+    userInfo: PropTypes.objectOf(
+        PropTypes.exact({
+            stats:{
+                followers: PropTypes.number.isRequired,
+                views: PropTypes.number.isRequired,
+                likes: PropTypes.number.isRequired,
+            }
+        })
+    )
 }
