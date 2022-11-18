@@ -1,15 +1,19 @@
-
-import { Profile } from "components/Profile/Profile";
 import css from "./Container.module.css";
-import user from "../../data/user.json";
 
 
 
-export const Container = () =>{
+
+export const Container = ({children}) =>{
+    
     return(
-        <div className={css.container}>
-            <Profile userInfo ={user}/>
-        </div>
+        <div className={css.container}>{children}</div>
         
     ) 
+    
+    
 };
+
+
+
+
+

@@ -1,6 +1,6 @@
 
-
+import css from "../Description.module.css";
 export const NameUser = ({name})=>{
-    return<p className="nameuser">{name}</p>
+    return<p className={css.nameuser}>{name}</p>
     
 }

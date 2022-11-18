@@ -1,5 +1,5 @@
-
+import css from "../Description.module.css";
 
 export const TagUser = ({tag}) =>{
-    return <p className="tag">{tag}</p>
+    return <p className={css.tag}>{tag}</p>
 }

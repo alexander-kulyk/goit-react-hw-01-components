@@ -1,5 +1,6 @@
 
+import css from "../Description.module.css";
 
 export const LocationUser = ({location}) =>{
-    return <p className="location">{location}</p>
+    return <p className={css.location}>{location}</p>
 }

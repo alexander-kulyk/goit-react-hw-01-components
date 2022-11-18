@@ -4,4 +4,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
+
+
+.nameuser{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 24px;
+
+}
+
+.tag{
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: rgb(194, 193, 193);
+}
+.location{
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: rgb(194, 193, 193);
+}
+
