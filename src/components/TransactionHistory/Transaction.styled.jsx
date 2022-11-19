@@ -5,7 +5,8 @@ export const Table = styled.table`
     width: 500px;
 
     box-shadow: ${p => p.theme.shadow.boxShadow};
-    border: ${p => p.theme.borders.border}
+    border: ${p => p.theme.borders.border};
+    margin: ${p => p.theme.space[4]}px 0;
 `
 
 export const TableHead = styled.thead`
