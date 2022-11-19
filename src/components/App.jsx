@@ -4,6 +4,10 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from "theme/theme";
 import user from "../data/user.json";
 import { Statistics } from "./Statistic/Statistic";
+import { FriendList } from "./FriendList/FriendList";
+import frinends from "../data/friends.json";
+
+
 
 
 
@@ -13,6 +17,7 @@ export const App = () => {
       <Container>
         <Profile userInfo ={user}/>
         <Statistics/>
+        <FriendList frinendsInfo={frinends}/>
       </Container>
   </ThemeProvider>)
     

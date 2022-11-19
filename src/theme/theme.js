@@ -5,6 +5,8 @@ export const theme = {
         textPrimary: 'black',
         secondText: 'white',
         bcPrimary: 'white',
+        isOnline: 'green',
+        isOffLine: 'red'
 
     },
     fonts: {
