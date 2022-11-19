@@ -6,6 +6,6 @@ export const Avatar = ({img}) =>{
 }
 
 
-Avatar.protoType = {
+Avatar.propType = {
     img: PropTypes.string.isRequired
 }

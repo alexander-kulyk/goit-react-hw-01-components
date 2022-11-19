@@ -7,6 +7,6 @@ export const NameUser = ({name})=>{
     
 }
 
-NameUser.protoType = {
+NameUser.propType = {
     username: PropTypes.string.isRequired
 }

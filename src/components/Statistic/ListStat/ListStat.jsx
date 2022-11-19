@@ -1,5 +1,5 @@
 import {List, ItemsStats, Percentage, Label} from "./List.styled";
-
+import PropTypes from 'prop-types';
 const backColorItems = percentage =>{
     return percentage >= 20 
             ? "pink" 
@@ -9,14 +9,24 @@ const backColorItems = percentage =>{
 export const ListStat = ({statInfo}) =>{
     
     return <List >
-            {statInfo.map(item =>(
-                <ItemsStats key={item.id} style={{backgroundColor:backColorItems(item.percentage)}}>
-                    <Label>{item.label}</Label>
-                    <Percentage>{item.percentage}%</Percentage>
+            {statInfo.map(({id, label, percentage}) =>(
+                <ItemsStats key={id} style={{backgroundColor:backColorItems(percentage)}}>
+                    <Label>{label}</Label>
+                    <Percentage>{percentage}%</Percentage>
                 </ItemsStats>
 
             ))}
             
         </List>
-}//{statInfo.map(item => console.log(item))}
-//<ItemsStats/>
+}
+
+ListStat.propTypes ={
+    statInfo: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired,
+          }),
+
+    ),
+}

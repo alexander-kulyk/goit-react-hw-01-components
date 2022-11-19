@@ -12,19 +12,3 @@ export const Profile =()=>{
 
 }
 
-
-
-
-
-
-// const {
-//   username, 
-//   tag, 
-//   location, 
-//   avatar,
-//   stats:{
-//     followers,
-//     views,
-//     likes
-//   }
-// } = user;

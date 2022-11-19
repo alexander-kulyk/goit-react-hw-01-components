@@ -26,9 +26,9 @@ export const Stats = ({userInfo}) =>{
     </ul>
 }
 
-Stats.protoType = {
+Stats.propType = {
     userInfo: PropTypes.objectOf(
-        PropTypes.exact({
+        PropTypes.shape({
             stats:{
                 followers: PropTypes.number.isRequired,
                 views: PropTypes.number.isRequired,

@@ -6,6 +6,6 @@ export const TagUser = ({tag}) =>{
 }
 
 
-TagUser.protoType = {
+TagUser.propType = {
     tag: PropTypes.string.isRequired
 }

@@ -2,6 +2,7 @@
 import { StatisticsBox } from "components/Statistic/Statistics.styled";
 import { ListStat } from "./ListStat/ListStat";
 import { TitleStat } from "./TitleStat/TitleStat";
+
 import statData from "../../data/data.json";
 
 

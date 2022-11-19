@@ -7,6 +7,6 @@ export const LocationUser = ({location}) =>{
 }
 
 
-LocationUser.protoType = {
+LocationUser.propType = {
     location: PropTypes.string.isRequired
 }
