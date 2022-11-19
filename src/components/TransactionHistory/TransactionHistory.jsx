@@ -1,15 +1,6 @@
 import PropTypes from 'prop-types';
 import { Table, TableHead, TableRow, ItemTable, TableBody, TableData } from "./Transaction.styled";
 
-const evenNumber = (transInfo) =>{
-
-   return transInfo.map((item, indx) => {
-
-       return indx % 2 === 0 ? "white" : "blue";
-        
-    }).join('')
-    
-}
 
 
 export const TransactionHistory = ({transInfo}) =>{
