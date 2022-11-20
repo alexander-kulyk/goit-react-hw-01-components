@@ -1,4 +1,4 @@
-import { Container } from "./Container/Container";
+import { Container } from "./Container/Container.styled";
 import {Profile}  from "components/Profile/Profile";
 import { ThemeProvider } from 'styled-components';
 import { theme } from "theme/theme";
@@ -18,7 +18,16 @@ import transactions from "../data/transactions.json";
 export const App = () => {
   return(
   <ThemeProvider theme={theme}>
-      <Container>
+      <Container
+        display="flex"
+        flexDirection='column'
+        justifyContent='center'
+        alignItems='center'
+
+        pt={5} 
+
+        bg=' rgb(231, 236, 248);'
+      >
         <Profile userInfo ={user}/>
         <Statistics/>
         <FriendList frinendsInfo={frinends}/>
