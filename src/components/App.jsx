@@ -1,5 +1,5 @@
 import { Container } from "./Container/Container.styled";
-import {Profile}  from "components/Profile/Profile";
+import { ProfileInfo}  from "components/Profile/Profile";
 import { ThemeProvider } from 'styled-components';
 import { theme } from "theme/theme";
 import user from "../data/user.json";
@@ -11,8 +11,19 @@ import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 import frinends from "../data/friends.json";
 import transactions from "../data/transactions.json";
 
+console.log(user);
 
-
+const {
+  avatar, 
+  location,
+  tag,
+  username,
+  stats:{
+    followers,
+    views,
+    likes
+  }
+} = user
 
 
 export const App = () => {
@@ -28,7 +39,16 @@ export const App = () => {
 
         bg=' rgb(231, 236, 248);'
       >
-        <Profile userInfo ={user}/>
+        < ProfileInfo 
+          username={username}
+          tag={tag}
+          location={location}
+          avatar={avatar}
+          followers={followers}
+          views={views}
+          likes={likes}
+
+        />
         <Statistics/>
         <FriendList frinendsInfo={frinends}/>
         <TransactionHistory transInfo ={transactions}/>

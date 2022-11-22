@@ -1,14 +1,46 @@
-import { Description } from "components/Description/Description"
-import { Stats } from "components/Stats/Stats";
-import user from "../../data/user.json";
-import css from "./Profile.module.css";
+import PropTypes from 'prop-types'
+import { Profile, Description, Avatar, Tag, Stats, ItemList, Name, Label, Quantity, Location } from 'components/Profile/Profile.styled'
 
 
-export const Profile =()=>{
-    return <div className={css.profile}>
-        <Description userInfo={user}/>
-        <Stats userInfo={user}/>
-    </div>
+
+export const ProfileInfo =({username, tag, location, avatar, followers, views,likes})=>{
+
+    return(
+        <Profile>
+            <Description>
+                <Avatar src={avatar}/>
+                <Tag>{tag}</Tag>
+                <Name>{username}</Name>
+                <Location>{location}</Location>
+                <Stats>
+                    <ItemList>
+                        <Label>Followers</Label>
+                        <Quantity>{followers}</Quantity>
+                    </ItemList>
+                    <ItemList>
+                        <Label>Views</Label>
+                        <Quantity>{views}</Quantity>
+                    </ItemList>
+                    <ItemList>
+                        <Label>Likes</Label>
+                        <Quantity>{likes}</Quantity>
+                    </ItemList>
+                </Stats>
+
+            </Description>
+
+        </Profile>
+    )  
 
 }
 
+
+Profile.propTypes ={
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired
+}

@@ -1,11 +1,11 @@
-import css from "../Description.module.css";
-import PropTypes from "prop-types";
+// import css from "../Description.module.css";
+// import PropTypes from "prop-types";
 
-export const TagUser = ({tag}) =>{
-    return <p className={css.tag}>{tag}</p>
-}
+// export const TagUser = ({tag}) =>{
+//     return <p className={css.tag}>{tag}</p>
+// }
 
 
-TagUser.propType = {
-    tag: PropTypes.string.isRequired
-}
+// TagUser.propType = {
+//     tag: PropTypes.string.isRequired
+// }
