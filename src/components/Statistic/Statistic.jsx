@@ -1,15 +1,39 @@
-
-import { StatisticsBox } from "components/Statistic/Statistics.styled";
-import { ListStat } from "./ListStat/ListStat";
-import { TitleStat } from "./TitleStat/TitleStat";
-
-import statData from "../../data/data.json";
+import PropTypes from 'prop-types';
+import { ItemsStats, Label, List, Percentage, StatisticsBox, Title } from "components/Statistic/Statistics.styled";
 
 
+const backColorItems = percentage =>{
+        return percentage >= 20 
+                ? "pink" 
+                : "green";
+    };
 
-export const Statistics = () =>{
-    return <StatisticsBox >
-        <TitleStat title ={"Upload stats"}/>
-        <ListStat statInfo = {statData}/>
+
+export const Statistics = ({title, stats}) =>{
+
+    return (
+        <StatisticsBox >
+         <Title>{title}</Title>
+        <List>
+            {stats.map(({id, label, percentage}) =>(
+                <ItemsStats key={id} style={{backgroundColor:backColorItems(percentage)}}>
+                    <Label>{label}</Label>
+                    <Percentage>{percentage}%</Percentage>
+                </ItemsStats>
+
+            ))}
+        </List>
     </StatisticsBox>
+    )
 }
+
+Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+      }),
+    ),
+  };

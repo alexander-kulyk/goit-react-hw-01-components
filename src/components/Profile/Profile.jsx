@@ -8,7 +8,7 @@ export const ProfileInfo =({username, tag, location, avatar, followers, views,li
     return(
         <Profile>
             <Description>
-                <Avatar src={avatar}/>
+                <Avatar src={avatar}  alt="User avatar"/>
                 <Tag>{tag}</Tag>
                 <Name>{username}</Name>
                 <Location>{location}</Location>
@@ -35,7 +35,7 @@ export const ProfileInfo =({username, tag, location, avatar, followers, views,li
 }
 
 
-Profile.propTypes ={
+ProfileInfo.propTypes ={
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
