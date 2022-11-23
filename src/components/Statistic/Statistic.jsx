@@ -13,7 +13,7 @@ export const Statistics = ({title, stats}) =>{
 
     return (
         <StatisticsBox >
-         <Title>{title}</Title>
+         {title && <Title>{title}</Title>}
         <List>
             {stats.map(({id, label, percentage}) =>(
                 <ItemsStats key={id} style={{backgroundColor:backColorItems(percentage)}}>

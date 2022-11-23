@@ -50,7 +50,7 @@ export const App = () => {
           likes={likes}
 
         />
-          <Statistics title="Upload stats" stats={data} />
+        <Statistics title="Upload stats" stats={data} />
         <Statistics stats={data}/>
         <FriendList frinendsInfo={frinends}/>
         <TransactionHistory transInfo ={transactions}/>
