@@ -19,13 +19,13 @@ const {
   location,
   tag,
   username,
-  stats:{
-    followers,
-    views,
-    likes
-  }
+  stats,
 } = user
-
+// stats:{
+//   followers,
+//   views,
+//   likes
+// }
 
 export const App = () => {
   return(
@@ -45,9 +45,7 @@ export const App = () => {
           tag={tag}
           location={location}
           avatar={avatar}
-          followers={followers}
-          views={views}
-          likes={likes}
+          stats={stats}
 
         />
         <Statistics title="Upload stats" stats={data} />

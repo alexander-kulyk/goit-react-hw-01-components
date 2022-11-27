@@ -3,7 +3,15 @@ import { Profile, Description, Avatar, Tag, Stats, ItemList, Name, Label, Quanti
 
 
 
-export const ProfileInfo =({username, tag, location, avatar, followers, views,likes})=>{
+export const ProfileInfo =({
+    username, 
+    tag, 
+    location, 
+    avatar, 
+    stats
+})=>{
+
+    const {followers, views, likes} = stats
 
     return(
         <Profile>
