@@ -1,5 +1,6 @@
+import { FrendsListItem } from 'components/FriendList/FrendsListItem/FrendsListItem';
 import PropTypes from 'prop-types';
-import { FriendsListUl, Item, Img, Status, Name } from "./FriendList.styled";
+import { FriendsListUl } from "./FriendList.styled";
 
 
 
@@ -8,11 +9,12 @@ export const FriendList = ({frinendsInfo}) =>{
    
     return <FriendsListUl>
         {frinendsInfo.map(({avatar, name, isOnline, id}) =>(
-            <Item key={id}>
-                <Status>{isOnline}</Status>
-                <Img src={avatar} alt="User avatar" width="48"/>
-                <Name>{name}</Name>
-            </Item>
+            <FrendsListItem 
+                key={id}
+                avatar={avatar}
+                name={name}
+                isOnline={isOnline}
+                />    
         ))}
     </FriendsListUl>
 };

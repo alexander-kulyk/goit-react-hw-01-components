@@ -11,7 +11,7 @@ export const ProfileInfo =({
     stats
 })=>{
 
-    const {followers, views, likes} = stats
+    const {followers, views, likes} = stats;
 
     return(
         <Profile>
@@ -48,7 +48,7 @@ ProfileInfo.propTypes ={
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number
 }
